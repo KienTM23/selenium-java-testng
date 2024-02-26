@@ -11,6 +11,7 @@ public class Topic_01_Check_Environment {
 
     @Test
     public void TC_01_Run_On_Firefox() {
+        //fifrefox
         driver = new FirefoxDriver();
         driver.get("https://www.facebook.com/");
         driver.quit();
@@ -18,6 +19,7 @@ public class Topic_01_Check_Environment {
 
     @Test
     public void TC_02_Run_On_Chrome() {
+        //Chrome
         driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
         driver.quit();
@@ -25,6 +27,7 @@ public class Topic_01_Check_Environment {
 
     @Test
     public void TC_03_Run_On_Edge() {
+        //Edge
         driver = new EdgeDriver();
         driver.get("https://www.facebook.com/");
         driver.quit();
