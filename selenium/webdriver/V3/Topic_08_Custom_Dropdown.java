@@ -119,6 +119,7 @@ public class Topic_08_Custom_Dropdown {
                 sleep(2);
 //        + step 4: click vào item
                 item.click();
+                //neu nhu ko sroll dc thi dung ham click cua javascript
                 sleep(2);
                 break;
             }
