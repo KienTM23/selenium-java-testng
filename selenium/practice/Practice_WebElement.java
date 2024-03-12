@@ -93,11 +93,38 @@ public class Practice_WebElement {
 
     }
     @Test
-    public void TC_02_Enabled(){}
+    public void TC_02_Enabled(){
+        driver.get("https://automationfc.github.io/basic-form/index.html");
+        //verify enable
+        Assert.assertTrue(driver.findElement(By.id("mail")).isEnabled());
+        Assert.assertTrue(driver.findElement(By.id("under_18")).isEnabled());
+        Assert.assertTrue(driver.findElement(By.id("edu")).isEnabled());
+        System.out.println("mail is enabled :"+ driver.findElement(By.id("mail")).isEnabled());
+        //verify disable
+        Assert.assertFalse(driver.findElement(By.id("disable_password")).isEnabled());
+        Assert.assertFalse(driver.findElement(By.id("radio-disabled")).isEnabled());
+        Assert.assertFalse(driver.findElement(By.id("slider-2")).isEnabled());
+        System.out.println("slider-2 is enabled :"+ driver.findElement(By.id("slider-2")).isEnabled());
+
+    }
     @Test
-    public void TC_03_Selected(){}
-    @Test
-    public void TC_04_All(){}
+    public void TC_03_Selected(){
+        driver.get("https://automationfc.github.io/basic-form/index.html");
+        By age = By.id("under_18");
+        By languages = By.id("java");
+        driver.findElement(age).click();
+        sleep(2);
+        driver.findElement(languages).click();
+        sleep(2);
+
+        //verify click
+        Assert.assertTrue(driver.findElement(age).isSelected());
+        Assert.assertTrue(driver.findElement(languages).isSelected());
+        //click java checkbox
+        driver.findElement(languages).click();
+        sleep(2);
+        Assert.assertFalse(driver.findElement(languages).isSelected());
+    }
 
     @AfterClass
     public void afterClass() {
