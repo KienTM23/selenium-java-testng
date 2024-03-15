@@ -31,7 +31,7 @@ public class Topic_08_Custom_Dropdown {
         //
         jsExecutor = (JavascriptExecutor) driver;
         //wait cho viec tim element
-        driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
 
